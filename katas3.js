@@ -1,15 +1,19 @@
 const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-
+    
 function show(titulo, texto){
-    const elemento = document.getElementsByTagName('main');
+    const elemento = document.getElementsByTagName('main')[0];
+
     let novo_titulo = document.createElement ('h3');
     let novo_texto = document.createElement ('p');
+
     novo_titulo.innerText = titulo;
     novo_texto.innerText = texto;
+
     elemento.appendChild(novo_titulo); 
     elemento.appendChild(novo_texto) ;
 
 }
+show('The sample Array for the task is:', sampleArray)
 
 function parametro (vaiAte, constante){
     let max = 0;
@@ -29,10 +33,9 @@ function kata1(final) {
     for (let n=0; n<=limite;n++){
         list.push(n);
     }
-    console.log(list);
     show ('kata1: Números de 1 a 25', list);
 }
-// kata1()
+kata1()
 
 function kata2(final) {
     // numeros de25 a 1
@@ -42,10 +45,9 @@ function kata2(final) {
     for (let n=limite; n>=1; n--){
         list.push(n);
     }
-    console.log(list);
     show ('kata2: Números de 25 a 1', list);
 }
-// kata2()
+kata2()
 
 function kata3(final) {
     // numeros de -1 a -25
@@ -55,10 +57,9 @@ function kata3(final) {
     for (let n=-1; n>=limite; n--){
         list.push(n);
     }
-    console.log(list);
     show ('kata3: Números de -1 a -25', list);
 }
-// kata3()
+kata3()
 
 function kata4(final) {
     // numeros de -25 a -1
@@ -68,10 +69,9 @@ function kata4(final) {
     for (let n=-25; n<=limite;n++){
         list.push(n);
     }
-    console.log(list);
     show ('kata4: Números de -25 a -1', list);
 }
-// kata4()
+kata4()
 
 
 function kata5(final) {
@@ -82,10 +82,9 @@ function kata5(final) {
     for (let n=25; n>=limite; n-=2){
         list.push(n);
     }
-    console.log(list);
     show ('kata5: Números impares de 25 a -25', list);
 }
-// kata5()
+kata5()
 
 function kata6(final) {
     // Divisiveis por 3 até 100
@@ -95,11 +94,10 @@ function kata6(final) {
     for (let n=3; n<=limite; n+=3){
         list.push(n);
     }
-    console.log(list);
     show ('kata5: Números divisiveis por 3 até 100', list);
 
 }
-// kata6()
+kata6()
 
 
 function kata7(final) {
@@ -110,10 +108,9 @@ function kata7(final) {
     for (let n=7; n<=limite; n+=7){
         list.push(n);
     }
-    console.log(list);
     show ('kata5: Números divisíveis por 7 até 100', list);
 }
-// kata7()
+kata7()
 
 function kata8(final) {
     // Divisiveis por 3 e7 até 100
@@ -126,10 +123,9 @@ function kata8(final) {
         }
         
     }
-    console.log(list);
     show ('kata5: Números divisiveis por 3 ou 7 regressivamente 100-0', list);
 }
-// kata8()
+kata8()
 
 function kata9(final) {
        // Divisiveis impares divisiveis por 5
@@ -142,16 +138,15 @@ function kata9(final) {
            }
            
        }
-       console.log(list);
        show ('kata5: Números impares divisiveis por 5 no intervalo 100-0', list);
    
 }
-// kata9()
+kata9()
 
 function kata10(final) {
-    console.log(sampleArray)
+    show ('kata10: Mostrar o sampleArray', sampleArray);
 }
-// kata10()
+kata10()
 
 function kata11(final) {
     // Números pares do array
@@ -164,10 +159,9 @@ function kata11(final) {
         }
         
     }
-    console.log(list);
     show ('kata5: Números impares divisiveis por 5 no intervalo 100-0', list);
 }
-// kata11()
+kata11()
 
 function kata12(final) {
     // Números impares do array
@@ -180,10 +174,9 @@ function kata12(final) {
         }
         
     }
-    console.log(list);
     show ('kata5: Números impares do array', list);
 }
-// kata12()
+kata12()
 
 function kata13(final) {
         // Números divisiveis por 8 do array
@@ -198,7 +191,7 @@ function kata13(final) {
         console.log(list);
         show ('kata5: Números divisiveis por 8', list);    
 }
-// kata13()
+kata13()
 
 function kata14(final) {
     // Números ao quadrado do array
@@ -208,10 +201,9 @@ function kata14(final) {
     for (let n=0; n<=limite-1; n++){
         list.push(sampleArray[n**2]);
     }
-    console.log(list);
     show ('kata5: Números ao quadrado da lista', list);
 }
-
+kata14()
 
 function kata15(final) {
     // Soma até 20
@@ -221,10 +213,9 @@ function kata15(final) {
     for (let n=0; n<=limite; n++){
         soma +=n;
     }
-    console.log(soma);
-    show ('kata5: Soma até 20', list);
+    show ('kata5: Soma até 20', soma);
 }
-// kata15()
+kata15()
 
 function kata16(final) {
     // Soma array
@@ -234,10 +225,9 @@ function kata16(final) {
     for (let n=0; n<=limite-1; n++){
         soma +=sampleArray[n];
     }
-    console.log(soma);
-    show ('kata5: Soma array', list);
+    show ('kata5: Soma array', soma);
 }
-// kata16()
+kata16()
 
 function kata17(final) {
     // Menor item do array
@@ -250,9 +240,9 @@ function kata17(final) {
         }
     }
     console.log(menor);
-    show ('kata5: Menor item do array', list);
+    show ('kata5: Menor item do array', menor);
 }
-// kata17()
+kata17()
 
 function kata18(final) {
     // Maior item do Array
@@ -264,7 +254,6 @@ function kata18(final) {
             maior = sampleArray[n]
         }
     }
-    console.log(maior);
     show ('kata5: Maior item do Array', list);
 }
 kata18()
